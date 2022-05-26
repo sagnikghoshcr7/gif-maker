@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
-import { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg';
+import React, { useState, useEffect } from "react";
+
+import { createFFmpeg, fetchFile } from "@ffmpeg/ffmpeg";
 const ffmpeg = createFFmpeg({ log: true });
 
 function App() {
@@ -34,14 +37,10 @@ function App() {
   }
 
   return ready ? (
-    
-    <div className="App">
-      { video && <video
-        controls
-        width="250"
-        src={URL.createObjectURL(video)}>
-
-      </video>}
+    <div className={styles.container}>
+      {video && (
+        <video controls width="250" src={URL.createObjectURL(video)}></video>
+      )}
 
       <input type="file" onChange={(e) => setVideo(e.target.files?.item(0))} />
 
@@ -49,11 +48,12 @@ function App() {
 
       <button onClick={convertToGif}>Convert</button>
 
-      { gif && <img src={gif} width="250" />}
-
+      {gif && <Image src={gif} alt="img" width="250" layout="fill" />}
     </div>
   ) : (
-    <p>Loading...</p>
+    <div className={styles.container}>
+      <p>Loading...</p>
+    </div>
   );
 }
 

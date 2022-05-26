@@ -1,0 +1,18 @@
+.container {
+  text-align: center;
+  padding-top: 15vh;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+
+  background-color:#99fff1;background-color:#99fff1;
+  background-image:
+  radial-gradient(at 58% 95%, hsla(300,78%,72%,1) 0px, transparent 50%),
+  radial-gradient(at 38% 19%, hsla(225,73%,65%,1) 0px, transparent 50%),
+  radial-gradient(at 60% 5%, hsla(288,69%,66%,1) 0px, transparent 50%),
+  radial-gradient(at 40% 48%, hsla(235,98%,71%,1) 0px, transparent 50%),
+  radial-gradient(at 22% 26%, hsla(338,67%,62%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 74%, hsla(315,98%,61%,1) 0px, transparent 50%),
+  radial-gradient(at 72% 56%, hsla(72,93%,77%,1) 0px, transparent 50%);
+}
